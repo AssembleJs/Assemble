@@ -17,6 +17,8 @@ Typescript file:
 class Hello {
   name = 'World'
 }
+
+render(document.getElementById('root'))
 ```
 
 Html file:
