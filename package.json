@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "test": "jest",
     "build:watch": "tsc --watch",
     "start": "parcel index.html",
     "start2": "concurrently --kill-others \"tsc --watch\" \"parcel index.html\""
@@ -12,10 +13,13 @@
     "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.4",
-    "tslint": "^6.1.2",
-    "typescript": "^3.9.3",
+    "@types/jest": "^26.0.3",
     "concurrently": "^5.2.0",
-    "esbuild": "^0.5.12"
+    "esbuild": "^0.5.12",
+    "jest": "^26.1.0",
+    "parcel-bundler": "^1.12.4",
+    "ts-jest": "^26.1.1",
+    "tslint": "^6.1.2",
+    "typescript": "^3.9.5"
   }
 }

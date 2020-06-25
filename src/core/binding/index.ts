@@ -24,8 +24,8 @@ export class Binding {
   }
 
   setCallback(callback: WatcherCallback) {
-    this.setWatchers();
     this.callback = callback;
+    this.setWatchers();
   }
 
   private watcher(prop: string, previous: any, next: any) {
@@ -36,7 +36,9 @@ export class Binding {
     const keys = Object.keys(this.instance);
     const binding = this.watcher.bind(this);
     for (const key of keys) {
-      this.instance.watch(key, binding);
+      if (this.instance.watch) {
+        this.instance.watch(key, binding);
+      }
     }
   }
 }
