@@ -17,10 +17,13 @@ export class Render implements IRender {
 
   render(parent?: IComponentInternal, element?: Element) {
     const options = this.component.options;
-
     if (this.isRoot) {
-      const eles = document.querySelectorAll(options.selector);
-      eles.forEach(this.renderEle.bind(this));
+      if (!parent && element) {
+        this.renderEle(element);
+      } else {
+        const eles = document.querySelectorAll(options.selector);
+        eles.forEach(this.renderEle.bind(this));
+      }
     }
 
     if (parent && element) {

@@ -22,7 +22,9 @@ class Hello {
 Html file:
 
 ```html
-<hello></hello>
+<div id='root'>
+  <hello></hello>
+</div
 ```
 
 # Design rules

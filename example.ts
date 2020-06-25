@@ -44,7 +44,7 @@ class LargeRender {
   items = [1, 2, 3, 4];
 }
 
-render();
+render(document.getElementById('root'));
 
 const now = new Date();
 console.log(`>> Benchmark, initial render ${now.getTime() - start.getTime()}ms`);
