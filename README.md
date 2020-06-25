@@ -24,3 +24,7 @@ Html file:
 ```html
 <hello></hello>
 ```
+
+# Design rules
+1. Template (view) shall be render only. Minimal to no business logic should be found there.
+2. The component should be testable
