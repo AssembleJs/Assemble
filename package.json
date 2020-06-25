@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "test": "jest",
-    "build:watch": "tsc --watch",
+    "build": "esbuild --bundle src/index.ts --outdir=dist --minify --sourcemap",
     "start": "parcel index.html",
     "start2": "concurrently --kill-others \"tsc --watch\" \"parcel index.html\""
   },
